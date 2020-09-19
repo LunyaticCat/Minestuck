@@ -11,6 +11,7 @@ public class MSItemGroup extends ItemGroup
 	public static final ItemGroup MAIN = new MSItemGroup("minestuck", () -> new ItemStack(MSItems.CLIENT_DISK));
 	public static final ItemGroup LANDS = new MSItemGroup("minestuck_lands", () -> new ItemStack(MSBlocks.GLOWING_MUSHROOM));
 	public static final ItemGroup WEAPONS = new MSItemGroup("minestuck_weapons", () -> new ItemStack(MSItems.ZILLYHOO_HAMMER));
+	public static final ItemGroup JUNKS = new MSItemGroup("minestuck_junks", () -> new ItemStack(MSItems.WOODEN_CARROT));
 	
 	private final Supplier<ItemStack> icon;
 	

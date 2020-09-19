@@ -657,6 +657,12 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		add(MSItems.UNKNOWABLE_EGG, "The Egg of Unknowable, Horrible Truths");
 		addTooltip(MSItems.UNKNOWABLE_EGG, "This egg somehow knows your name.");
 		add(MSItems.BREADCRUMBS, "Breadcrumbs");
+		add(MSItems.ACACIA_PLANK, "Acacia Plank");
+		add(MSItems.BIRCH_PLANK, "Birch Plank");
+		add(MSItems.DARK_OAK_PLANK, "Dark Oak Plank");
+		add(MSItems.JUNGLE_PLANK, "Jungle Plank");
+		add(MSItems.OAK_PLANK, "Oak Plank");
+		add(MSItems.SPRUCE_PLANK, "Spruce Plank");
 		add(MSItems.GOLDEN_GRASSHOPPER, "Golden Grasshopper");
 		add(MSItems.BUG_NET, "Net");
 		addTooltip(MSItems.BUG_NET, "Perfect for catching bugs and frogs!");
@@ -814,6 +820,7 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		add(MSItemGroup.MAIN, "Minestuck Main");
 		add(MSItemGroup.LANDS, "Minestuck Lands");
 		add(MSItemGroup.WEAPONS, "Minestuck Weapons");
+		add(MSItemGroup.JUNKS, "Minestuck Decorations & Junks");
 		
 		add(MSBiomes.SKAIA, "Skaia");
 		add(MSBiomes.LAND_NORMAL, "Land");

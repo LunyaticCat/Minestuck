@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minecraft:stick"
+  },
+  "input2": {
+    "item": "minecraft:spruce_planks"
+  },
+  "mode": "or",
+  "output": {
+    "item": "minestuck:spruce_plank"
+  }
+}
