@@ -462,6 +462,14 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.STONE_SLAB).input(Items.STONE).and().input(MSItems.CARVING_TOOL).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.GLOWYSTONE_DUST).input(Items.REDSTONE).or().input(Items.GLOWSTONE_DUST).build(consumer);
 		
+		//Junks
+		CombinationRecipeBuilder.of(MSItems.ACACIA_PLANK).input(Items.STICK).or().input(Blocks.ACACIA_PLANKS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.BIRCH_PLANK).input(Items.STICK).or().input(Blocks.BIRCH_PLANKS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.DARK_OAK_PLANK).input(Items.STICK).or().input(Blocks.DARK_OAK_PLANKS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.JUNGLE_PLANK).input(Items.STICK).or().input(Blocks.JUNGLE_PLANKS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.OAK_PLANK).input(Items.STICK).or().input(Blocks.OAK_PLANKS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.SPRUCE_PLANK).input(Items.STICK).or().input(Blocks.SPRUCE_PLANKS).build(consumer);
+		
 		CombinationRecipeBuilder.of(MSBlocks.BLUE_DIRT).input(Items.DIRT).or().input(Items.BLUE_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.THOUGHT_DIRT).input(Items.DIRT).or().input(Items.LIME_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.COARSE_END_STONE).input(Items.COARSE_DIRT).or().input(Items.END_STONE).build(consumer);

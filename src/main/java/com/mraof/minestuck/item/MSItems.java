@@ -275,6 +275,15 @@ public class MSItems
 	public static final Item UNKNOWABLE_EGG = getNull();
 	public static final Item BREADCRUMBS = getNull();
 	
+	//Junks
+	public static final Item ACACIA_PLANK = getNull();
+	public static final Item BIRCH_PLANK = getNull();
+	public static final Item DARK_OAK_PLANK = getNull();
+	public static final Item JUNGLE_PLANK = getNull();
+	public static final Item OAK_PLANK = getNull();
+	public static final Item SPRUCE_PLANK = getNull();
+	public static final Item WOODEN_CARROT = getNull();
+	
 	//Other Land Items
 	public static final Item GOLDEN_GRASSHOPPER = getNull();
 	public static final Item BUG_NET = getNull();
@@ -331,7 +340,6 @@ public class MSItems
 	public static final Item URANIUM_POWERED_STICK = getNull();
 	public static final Item IRON_BOAT = getNull();
 	public static final Item GOLD_BOAT = getNull();
-	public static final Item WOODEN_CARROT = getNull();
 	
 	//Music Discs
 	public static final Item MUSIC_DISC_EMISSARY_OF_DANCE = getNull();
@@ -770,7 +778,6 @@ public class MSItems
 		registry.register(new SoupItem(new Item.Properties().group(MSItemGroup.LANDS).food(MSFoods.SALAD).maxStackSize(1)).setRegistryName("salad"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.LANDS).food(MSFoods.DESERT_FRUIT)).setRegistryName("desert_fruit"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.LANDS)).setRegistryName("rock_cookie"));	//Not actually food, but let's pretend it is
-		registry.register(new Item(new Item.Properties().group(MSItemGroup.LANDS).food(MSFoods.WOODEN_CARROT)).setRegistryName("wooden_carrot"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.LANDS).food(MSFoods.FUNGAL_SPORE)).setRegistryName("fungal_spore"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.LANDS).food(MSFoods.SPOREO)).setRegistryName("sporeo"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.LANDS).food(MSFoods.MOREL_MUSHROOM)).setRegistryName("morel_mushroom"));
@@ -821,6 +828,15 @@ public class MSItems
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.LANDS)).setRegistryName("stone_eyeballs"));
 		registry.register(new StoneTabletItem(new Item.Properties().group(MSItemGroup.LANDS)).setRegistryName("stone_slab"));
 		//registry.register(new HangingItem((world, pos, facing, stack) -> new EntityShopPoster(world, pos, facing, stack, 0), new Item.Properties().maxStackSize(1).group(ModItemGroup.LANDS)).setRegistryName("shop_poster"));
+		
+		//Junks
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.WOODEN_CARROT)).setRegistryName("wooden_carrot"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("acacia_plank"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("birch_plank"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("dark_oak_plank"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("jungle_plank"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("oak_plank"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("spruce_plank"));
 		
 		registry.register(new BucketItem(MSFluids.OIL, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MSItemGroup.MAIN)).setRegistryName("oil_bucket"));
 		registry.register(new BucketItem(MSFluids.BLOOD, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MSItemGroup.MAIN)).setRegistryName("blood_bucket"));
