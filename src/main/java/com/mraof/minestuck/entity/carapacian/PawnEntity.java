@@ -21,19 +21,27 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
-public abstract class PawnEntity extends CarapacianEntity implements IRangedAttackMob, IMob
+public class PawnEntity extends CarapacianEntity implements IRangedAttackMob, IMob
 {
-	private static Random randStatic = new Random();
 	private final RangedAttackGoal aiArrowAttack = new RangedAttackGoal(this, 0.25F, 20, 10.0F);
 	private final MeleeAttackGoal aiMeleeAttack = new MeleeAttackGoal(this, .4F, false);
 	
-	public PawnEntity(EntityType<? extends PawnEntity> type, World world)
+	protected PawnEntity(EntityType<? extends PawnEntity> type, EnumEntityKingdom kingdom, World world)
 	{
-		super(type, world);
+		super(type, kingdom, world);
 		this.experienceValue = 1;
 		setCombatTask();
+	}
+	
+	public static PawnEntity createProspitian(EntityType<? extends PawnEntity> type, World world)
+	{
+		return new PawnEntity(type, EnumEntityKingdom.PROSPITIAN, world);
+	}
+	
+	public static PawnEntity createDersite(EntityType<? extends PawnEntity> type, World world)
+	{
+		return new PawnEntity(type, EnumEntityKingdom.DERSITE, world);
 	}
 	
 	@Override
@@ -56,7 +64,7 @@ public abstract class PawnEntity extends CarapacianEntity implements IRangedAtta
 	protected void setEquipmentBasedOnDifficulty(DifficultyInstance difficulty)
 	{
 		super.setEquipmentBasedOnDifficulty(difficulty);
-		this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(randStatic.nextDouble() < .25 ? Items.BOW : rand.nextDouble() < .2 ? MSItems.REGISWORD : rand.nextDouble() < .02 ? MSItems.SORD : Items.STONE_SWORD));
+		this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(rand.nextDouble() < .25 ? Items.BOW : rand.nextDouble() < .2 ? MSItems.REGISWORD : rand.nextDouble() < .02 ? MSItems.SORD : Items.STONE_SWORD));
 	}
 	
 	@Override
@@ -66,7 +74,7 @@ public abstract class PawnEntity extends CarapacianEntity implements IRangedAtta
 		double d0 = target.getPosX() - this.getPosX();
 		double d1 = target.getBoundingBox().minY + (double)(target.getHeight() / 3.0F) - arrow.getPosY();
 		double d2 = target.getPosZ() - this.getPosZ();
-		double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
+		double d3 = MathHelper.sqrt(d0 * d0 + d2 * d2);
 		arrow.shoot(d0, d1 + d3 * 0.2D, d2, 1.6F, 12.0F);
 		int power = EnchantmentHelper.getMaxEnchantmentLevel(Enchantments.POWER, this);
 		int punch = EnchantmentHelper.getMaxEnchantmentLevel(Enchantments.PUNCH, this);
