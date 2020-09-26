@@ -598,6 +598,18 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		addStoreTooltip(MSItems.ROCK_COOKIE, "This here is a true wonder-cookie! Totally! And they are even cheaper than regular cookies!");
 		add(MSItems.WOODEN_CARROT, "Wooden Carrot");
 		addTooltip(MSItems.WOODEN_CARROT, "It's as edible as a plank.");
+		add(MSItems.GOLDEN_CARROT_INGOT, "24 Carrot Ingot");
+		addTooltip(MSItems.GOLDEN_CARROT_INGOT, "This carrot is made out of the purest gold, what a luxury!");
+		add(MSItems.CRYSTALLINE_CARROT, "Crystalline Carrot");
+		addTooltip(MSItems.CRYSTALLINE_CARROT, "If a golden carrot is good to eat, this must be even better!");
+		add(MSItems.CARROTON_INGOT, "Carroton Ingot");
+		addTooltip(MSItems.CARROTON_INGOT, "What a dense carrot, it might be difficult to chew it.");
+		add(MSItems.IRON_CARROT, "Iron Carrot");
+		addTooltip(MSItems.IRON_CARROT, "Yeah, I'm pretty sure you would break your teeth if you ate this.");
+		add(MSItems.STICKY_CANDYBALL, "Sticky Candyball");
+		addTooltip(MSItems.STICKY_CANDYBALL, "Oh god, why does this thing look so gross and so delicious at the same time?!");
+		add(MSItems.ROYAL_STEAK, "Royal Steack");
+		addTooltip(MSItems.ROYAL_STEAK, "A meal worthy of a king!");
 		add(MSItems.FUNGAL_SPORE, "Fungal Spore");
 		addTooltip(MSItems.FUNGAL_SPORE, "You must live off the land, and in this land, it means eating this.");
 		addStore(MSItems.FUNGAL_SPORE, "Mushroom Skittles");

@@ -284,6 +284,12 @@ public class MSItems
 	public static final Item OAK_PLANK = getNull();
 	public static final Item SPRUCE_PLANK = getNull();
 	public static final Item WOODEN_CARROT = getNull();
+	public static final Item GOLDEN_CARROT_INGOT = getNull();
+	public static final Item CRYSTALLINE_CARROT = getNull();
+	public static final Item CARROTON_INGOT = getNull();
+	public static final Item IRON_CARROT = getNull();
+	public static final Item STICKY_CANDYBALL = getNull();
+	public static final Item ROYAL_STEAK = getNull();
 	
 	//Other Land Items
 	public static final Item GOLDEN_GRASSHOPPER = getNull();
@@ -592,7 +598,7 @@ public class MSItems
 		registerItemBlock(registry, BLENDER, MSItemGroup.MAIN);
 		registerItemBlock(registry, CHESSBOARD, MSItemGroup.MAIN);
 		registerItemBlock(registry, MINI_FROG_STATUE, MSItemGroup.MAIN);
-		registerItemBlock(registry, CASSETTE_PLAYER, MSItemGroup.MAIN);
+		registerItemBlock(registry, CASSETTE_PLAYER, MSItemGroup.JUNKS);
 		
 		registerItemBlock(registry, GLOWYSTONE_DUST, MSItemGroup.MAIN);
 		
@@ -851,7 +857,13 @@ public class MSItems
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("jungle_plank"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("oak_plank"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("spruce_plank"));
-		
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.GOLDEN_CARROT_INGOT)).setRegistryName("golden_carrot_ingot"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.CRYSTALLINE_CARROT)).setRegistryName("crystalline_carrot"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.CARROTON_INGOT)).setRegistryName("carroton_ingot"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.IRON_CARROT)).setRegistryName("iron_carrot"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.STICKY_CANDYBALL)).setRegistryName("sticky_candyball"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.ROYAL_STEAK)).setRegistryName("royal_steak"));
+
 		registry.register(new BucketItem(MSFluids.OIL, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MSItemGroup.MAIN)).setRegistryName("oil_bucket"));
 		registry.register(new BucketItem(MSFluids.BLOOD, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MSItemGroup.MAIN)).setRegistryName("blood_bucket"));
 		registry.register(new BucketItem(MSFluids.BRAIN_JUICE, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MSItemGroup.MAIN)).setRegistryName("brain_juice_bucket"));
