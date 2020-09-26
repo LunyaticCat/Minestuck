@@ -469,7 +469,16 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.JUNGLE_PLANK).input(Items.STICK).or().input(Blocks.JUNGLE_PLANKS).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.OAK_PLANK).input(Items.STICK).or().input(Blocks.OAK_PLANKS).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.SPRUCE_PLANK).input(Items.STICK).or().input(Blocks.SPRUCE_PLANKS).build(consumer);
-		
+		CombinationRecipeBuilder.of(MSItems.WOODEN_CARROT).input(Items.CARROT).and().namedInput(ItemTags.PLANKS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.WOODEN_CARROT).input(Items.CARROT).and().namedInput(ItemTags.LOGS).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.GOLDEN_CARROT_INGOT).input(Items.CARROT).and().input(Items.GOLD_INGOT).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.CRYSTALLINE_CARROT).input(Items.CARROT).and().input(Items.DIAMOND).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.CARROTON_INGOT).input(Items.CARROT).or().namedInput(Items.GOLD_INGOT).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.CARROTON_INGOT).input(Items.CARROT).or().namedInput(Items.IRON_INGOT).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.IRON_CARROT).input(Items.CARROT).and().input(Items.IRON_INGOT).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.STICKY_CANDYBALL).input(MSItems.CANDY_CANE).or().input(Items.SLIME_BALL).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.ROYAL_STEAK).input(Items.GOLD_INGOT).or().input(Items.COOKED_BEEF).build(consumer);
+
 		CombinationRecipeBuilder.of(MSBlocks.BLUE_DIRT).input(Items.DIRT).or().input(Items.BLUE_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.THOUGHT_DIRT).input(Items.DIRT).or().input(Items.LIME_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.COARSE_END_STONE).input(Items.COARSE_DIRT).or().input(Items.END_STONE).build(consumer);
@@ -587,8 +596,6 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.ROCK_COOKIE).input(Items.COOKIE).and().namedInput(Items.STONE).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.ROCK_COOKIE).input(Items.COOKIE).and().namedInput(Items.COBBLESTONE).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.ROCK_COOKIE).input(Items.COOKIE).and().namedInput(Items.GRAVEL).build(consumer);
-		CombinationRecipeBuilder.of(MSItems.WOODEN_CARROT).input(Items.CARROT).and().namedInput(ItemTags.PLANKS).build(consumer);
-		CombinationRecipeBuilder.of(MSItems.WOODEN_CARROT).input(Items.CARROT).and().namedInput(ItemTags.LOGS).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.FUNGAL_SPORE).input(Items.WHEAT_SEEDS).or().input(Tags.Items.MUSHROOMS).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.SPOREO).input(Items.COOKIE).and().input(MSItems.FUNGAL_SPORE).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.FRENCH_FRY).input(Items.POTATO).and().namedInput(Items.STICK).build(consumer);
