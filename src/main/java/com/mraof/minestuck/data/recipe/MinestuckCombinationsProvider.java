@@ -478,6 +478,9 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.IRON_CARROT).input(Items.CARROT).and().input(Items.IRON_INGOT).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.STICKY_CANDYBALL).input(MSItems.CANDY_CANE).or().input(Items.SLIME_BALL).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.ROYAL_STEAK).input(Items.GOLD_INGOT).or().input(Items.COOKED_BEEF).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.ROYAL_STICK).input(Items.STICK).and().input(Items.GOLD_INGOT).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.REINFORCED_STICK).input(Items.STICK).and().input(Items.IRON_INGOT).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.LUXURY_STICK).input(Items.STICK).and().input(Items.DIAMOND).build(consumer);
 
 		CombinationRecipeBuilder.of(MSBlocks.BLUE_DIRT).input(Items.DIRT).or().input(Items.BLUE_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.THOUGHT_DIRT).input(Items.DIRT).or().input(Items.LIME_DYE).build(consumer);

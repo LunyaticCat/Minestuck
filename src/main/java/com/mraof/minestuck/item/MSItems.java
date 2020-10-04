@@ -290,7 +290,10 @@ public class MSItems
 	public static final Item IRON_CARROT = getNull();
 	public static final Item STICKY_CANDYBALL = getNull();
 	public static final Item ROYAL_STEAK = getNull();
-	
+	public static final Item ROYAL_STICK = getNull();
+	public static final Item REINFORCED_STICK = getNull();
+	public static final Item LUXURY_STICK = getNull();
+
 	//Other Land Items
 	public static final Item GOLDEN_GRASSHOPPER = getNull();
 	public static final Item BUG_NET = getNull();
@@ -862,6 +865,9 @@ public class MSItems
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.IRON_CARROT)).setRegistryName("iron_carrot"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.STICKY_CANDYBALL)).setRegistryName("sticky_candyball"));
 		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS).food(MSFoods.ROYAL_STEAK)).setRegistryName("royal_steak"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("royal_stick"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("reinforced_stick"));
+		registry.register(new Item(new Item.Properties().group(MSItemGroup.JUNKS)).setRegistryName("luxury_stick"));
 
 		registry.register(new BucketItem(MSFluids.OIL, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MSItemGroup.MAIN)).setRegistryName("oil_bucket"));
 		registry.register(new BucketItem(MSFluids.BLOOD, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MSItemGroup.MAIN)).setRegistryName("blood_bucket"));
