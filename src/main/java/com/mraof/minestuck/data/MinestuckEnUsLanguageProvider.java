@@ -608,8 +608,14 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		addTooltip(MSItems.IRON_CARROT, "Yeah, I'm pretty sure you would break your teeth if you ate this.");
 		add(MSItems.STICKY_CANDYBALL, "Sticky Candyball");
 		addTooltip(MSItems.STICKY_CANDYBALL, "Oh god, why does this thing look so gross and so delicious at the same time?!");
-		add(MSItems.ROYAL_STEAK, "Royal Steack");
+		add(MSItems.ROYAL_STEAK, "Royal Steak");
 		addTooltip(MSItems.ROYAL_STEAK, "A meal worthy of a king!");
+		add(MSItems.ROYAL_STICK, "Royal Stick");
+		addTooltip(MSItems.ROYAL_STICK, "If you squint your eyes, it might look like the legendary key!");
+		add(MSItems.REINFORCED_STICK, "Reinforced Stick");
+		addTooltip(MSItems.REINFORCED_STICK, "Wow you could break so many blocks before this item wears out!");
+		add(MSItems.LUXURY_STICK, "Luxury Stick");
+		addTooltip(MSItems.LUXURY_STICK, "Yes it looks fancy, but you should probably throw it away before you get cut.");
 		add(MSItems.FUNGAL_SPORE, "Fungal Spore");
 		addTooltip(MSItems.FUNGAL_SPORE, "You must live off the land, and in this land, it means eating this.");
 		addStore(MSItems.FUNGAL_SPORE, "Mushroom Skittles");
