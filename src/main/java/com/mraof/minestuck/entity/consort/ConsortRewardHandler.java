@@ -81,7 +81,7 @@ public class ConsortRewardHandler
 		ConsortRewardHandler.registerPrice(new ItemStack(ZILLIUM_SKITTLES), 250, 300);
 		
 		ConsortRewardHandler.registerPrice(new ItemStack(CARVING_TOOL), 60, 90);
-		ConsortRewardHandler.registerPrice(new ItemStack(MINI_FROG_STATUE), 200, 250);
+		ConsortRewardHandler.registerPrice(new ItemStack(STONE_MINI_FROG_STATUE), 200, 250);
 		ConsortRewardHandler.registerPrice(new ItemStack(MSItems.STONE_SLAB), 20, 30);
 		ConsortRewardHandler.registerPrice(new ItemStack(THRESH_DVD), 350, 400);
 		ConsortRewardHandler.registerPrice(new ItemStack(CREW_POSTER), 350, 400);

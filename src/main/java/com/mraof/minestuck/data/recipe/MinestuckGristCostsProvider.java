@@ -3,7 +3,6 @@ package com.mraof.minestuck.data.recipe;
 import com.mraof.minestuck.Minestuck;
 import com.mraof.minestuck.block.MSBlocks;
 import com.mraof.minestuck.item.MSItems;
-import com.mraof.minestuck.item.crafting.alchemy.GristSet;
 import com.mraof.minestuck.item.crafting.alchemy.GristType;
 import com.mraof.minestuck.item.crafting.alchemy.GristTypes;
 import com.mraof.minestuck.util.ExtraForgeTags;
@@ -11,7 +10,6 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
@@ -571,7 +569,7 @@ public class MinestuckGristCostsProvider extends RecipeProvider
 		GristCostRecipeBuilder.of(MSItems.CLOTHES_IRON).grist(BUILD, 4).grist(SHALE, 4).grist(RUST, 4).build(recipeSaver);
 		GristCostRecipeBuilder.of(MSItems.CARVING_TOOL).grist(BUILD, 10).grist(RUST, 2).build(recipeSaver);
 		GristCostRecipeBuilder.of(MSItems.CRUMPLY_HAT).grist(BUILD, 20).build(recipeSaver);
-		GristCostRecipeBuilder.of(MSBlocks.MINI_FROG_STATUE).grist(BUILD, 30).build(recipeSaver);
+		GristCostRecipeBuilder.of(MSBlocks.STONE_MINI_FROG_STATUE).grist(BUILD, 30).build(recipeSaver);
 		
 		GristCostRecipeBuilder.of(MSItems.SCALEMATE_APPLESCAB).grist(BUILD, 8).grist(RUBY, 8).build(recipeSaver);
 		GristCostRecipeBuilder.of(MSItems.SCALEMATE_BERRYBREATH).grist(BUILD, 8).grist(COBALT, 8).build(recipeSaver);

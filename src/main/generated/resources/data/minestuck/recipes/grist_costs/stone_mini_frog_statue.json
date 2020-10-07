@@ -1,7 +1,7 @@
 {
   "type": "minestuck:grist_cost",
   "ingredient": {
-    "item": "minestuck:mini_frog_statue"
+    "item": "minestuck:stone_mini_frog_statue"
   },
   "grist_cost": {
     "minestuck:build": 30

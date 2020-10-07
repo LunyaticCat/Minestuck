@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minestuck:mini_frog_statue"
+          "name": "minestuck:stone_mini_frog_statue"
         }
       ],
       "conditions": [

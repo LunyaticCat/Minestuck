@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "minestuck:item/mini_frog_statue"
+        "layer0": "minestuck:item/stone_mini_frog_statue"
     }
 }

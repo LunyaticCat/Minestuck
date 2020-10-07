@@ -364,7 +364,7 @@ public class MSChestLootTables implements Consumer<BiConsumer<ResourceLocation, 
 						.addEntry(ItemLootEntry.builder(MSItems.GOLDEN_GRASSHOPPER).weight(1).quality(2)))
 				.addLootPool(LootPool.builder().name(MISC_POOL).rolls(ConstantRange.of(1))
 						.addEntry(ItemLootEntry.builder(Items.LILY_PAD).weight(9).quality(-2).acceptFunction(SetCount.builder(RandomValueRange.of(1, 9))))
-						.addEntry(ItemLootEntry.builder(MSBlocks.MINI_FROG_STATUE).weight(5).quality(3))
+						.addEntry(ItemLootEntry.builder(MSBlocks.STONE_MINI_FROG_STATUE).weight(5).quality(3))
 						.addEntry(ItemLootEntry.builder(MSItems.THRESH_DVD).weight(4).quality(2))));
 		
 		lootProcessor.accept(locationFor(LandTypes.WIND, MSLootTables.BASIC_MEDIUM_CHEST), LootTable.builder()

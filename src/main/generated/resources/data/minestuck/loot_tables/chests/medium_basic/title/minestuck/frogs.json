@@ -72,7 +72,7 @@
           "type": "minecraft:item",
           "weight": 5,
           "quality": 3,
-          "name": "minestuck:mini_frog_statue"
+          "name": "minestuck:stone_mini_frog_statue"
         },
         {
           "type": "minecraft:item",

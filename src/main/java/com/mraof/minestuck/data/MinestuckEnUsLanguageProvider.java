@@ -293,8 +293,9 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		add(MSBlocks.BLENDER, "Blender");
 		add(MSBlocks.CHESSBOARD, "Chessboard");
 		add(MSBlocks.CASSETTE_PLAYER, "Cassette Player");
-		add(MSBlocks.MINI_FROG_STATUE, "Frog Statue Replica");
-		addStoreTooltip(MSBlocks.MINI_FROG_STATUE, "Some say it's creepy, some say it's cute, others would say it's contraband, so keep it out of sight!");
+		add(MSBlocks.STONE_MINI_FROG_STATUE, "Frog Statue Replica");
+		addStoreTooltip(MSBlocks.STONE_MINI_FROG_STATUE, "Some say it's creepy, some say it's cute, others would say it's contraband, so keep it out of sight!");
+		add(MSBlocks.GOLDEN_MINI_FROG_STATUE, "Golden Frog Statue Replica");
 		add(MSBlocks.GLOWYSTONE_DUST, "Glowystone Dust");
 		add(MSBlocks.OIL, "Oil");
 		add(MSBlocks.BLOOD, "Blood");

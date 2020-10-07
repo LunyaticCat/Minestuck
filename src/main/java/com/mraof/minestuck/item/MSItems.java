@@ -596,12 +596,15 @@ public class MSItems
 		registerItemBlock(registry, INSTANT_TNT, MSItemGroup.MAIN);
 		registerItemBlock(registry, WOODEN_EXPLOSIVE_BUTTON, MSItemGroup.MAIN);
 		registerItemBlock(registry, STONE_EXPLOSIVE_BUTTON, MSItemGroup.MAIN);
-		
+
+		//Junk Blocks
+		registerItemBlock(registry, GOLDEN_MINI_FROG_STATUE, MSItemGroup.JUNKS);
+		registerItemBlock(registry, CASSETTE_PLAYER, MSItemGroup.JUNKS);
+
 		registerItemBlock(registry, BLENDER, MSItemGroup.MAIN);
 		registerItemBlock(registry, CHESSBOARD, MSItemGroup.MAIN);
-		registerItemBlock(registry, MINI_FROG_STATUE, MSItemGroup.MAIN);
-		registerItemBlock(registry, CASSETTE_PLAYER, MSItemGroup.JUNKS);
-		
+		registerItemBlock(registry, STONE_MINI_FROG_STATUE, MSItemGroup.MAIN);
+
 		registerItemBlock(registry, GLOWYSTONE_DUST, MSItemGroup.MAIN);
 		
 		//hammers

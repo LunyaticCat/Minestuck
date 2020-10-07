@@ -74,7 +74,8 @@ public class ClientProxy
 		RenderTypeLookup.setRenderLayer(MSBlocks.CRUXITE_DOWEL, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(MSBlocks.BLENDER, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(MSBlocks.CHESSBOARD, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(MSBlocks.MINI_FROG_STATUE, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(MSBlocks.STONE_MINI_FROG_STATUE, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(MSBlocks.GOLDEN_MINI_FROG_STATUE, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(MSBlocks.CASSETTE_PLAYER, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(MSBlocks.GLOWYSTONE_DUST, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(MSBlocks.GOLD_SEEDS, RenderType.getCutout());

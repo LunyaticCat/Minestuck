@@ -163,14 +163,16 @@ public class MSBlocks
 	public static final Block INSTANT_TNT = getNull();
 	public static final Block WOODEN_EXPLOSIVE_BUTTON = getNull();
 	public static final Block STONE_EXPLOSIVE_BUTTON = getNull();
-	
+
+	//Junks
+	public static final Block STONE_MINI_FROG_STATUE = getNull();
+	public static final Block GOLDEN_MINI_FROG_STATUE = getNull();
+	public static final CassettePlayerBlock CASSETTE_PLAYER = getNull();
+
 	//Misc Alchemy Objects
 	public static final Block BLENDER = getNull();
 	public static final Block CHESSBOARD = getNull();
-	public static final Block MINI_FROG_STATUE = getNull();
 	public static final Block GLOWYSTONE_DUST = getNull();
-	public static final CassettePlayerBlock CASSETTE_PLAYER = getNull();
-	
 	public static final FlowingFluidBlock OIL = getNull(), BLOOD = getNull(), BRAIN_JUICE = getNull();
 	public static final FlowingFluidBlock WATER_COLORS = getNull(), ENDER = getNull(), LIGHT_WATER = getNull();
 	
@@ -408,11 +410,14 @@ public class MSBlocks
 		registry.register(new SpecialTNTBlock(Block.Properties.create(Material.TNT).hardnessAndResistance(0.0F).sound(SoundType.PLANT), false, false, true).setRegistryName("instant_tnt"));
 		registry.register(new SpecialButtonBlock(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.5F).sound(SoundType.WOOD), true, true).setRegistryName("wooden_explosive_button"));
 		registry.register(new SpecialButtonBlock(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.5F).sound(SoundType.STONE), true, false).setRegistryName("stone_explosive_button"));
-		
+
+		//Junks
+		registry.register(new DecorBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F), MSBlockShapes.FROG_STATUE).setRegistryName("stone_mini_frog_statue"));
+		registry.register(new DecorBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F), MSBlockShapes.FROG_STATUE).setRegistryName("golden_mini_frog_statue"));
+		registry.register(new CassettePlayerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F).sound(SoundType.METAL), MSBlockShapes.CASSETTE_PLAYER).setRegistryName("cassette_player"));
+
 		registry.register(new DecorBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F).sound(SoundType.METAL), MSBlockShapes.BLENDER).setRegistryName("blender"));
 		registry.register(new DecorBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F), MSBlockShapes.CHESSBOARD).setRegistryName("chessboard"));
-		registry.register(new DecorBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F), MSBlockShapes.FROG_STATUE).setRegistryName("mini_frog_statue"));
-		registry.register(new CassettePlayerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F).sound(SoundType.METAL), MSBlockShapes.CASSETTE_PLAYER).setRegistryName("cassette_player"));
 		registry.register(new GlowystoneWireBlock(Block.Properties.create(Material.MISCELLANEOUS).hardnessAndResistance(0.0F).lightValue(16).doesNotBlockMovement()).setRegistryName("glowystone_dust"));
 		
 		registry.register(new FlowingModFluidBlock(MSFluids.OIL, new Vec3d(0.0, 0.0, 0.0), 0.75f, Block.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100.0F).noDrops()).setRegistryName("oil"));
