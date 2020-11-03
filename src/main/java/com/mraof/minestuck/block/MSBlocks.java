@@ -146,6 +146,7 @@ public class MSBlocks
 	//Misc Alchemy Semi-Plants
 	public static final Block GOLD_SEEDS = getNull();
 	public static final Block WOODEN_CACTUS = getNull();
+	public static final Block GLOWFLOWER = getNull();
 	
 	//Cakes
 	public static final Block APPLE_CAKE = getNull();
@@ -168,6 +169,7 @@ public class MSBlocks
 	public static final Block STONE_MINI_FROG_STATUE = getNull();
 	public static final Block GOLDEN_MINI_FROG_STATUE = getNull();
 	public static final CassettePlayerBlock CASSETTE_PLAYER = getNull();
+	public static final Block CHARRED_OBSIDIAN = getNull();
 
 	//Misc Alchemy Objects
 	public static final Block BLENDER = getNull();
@@ -341,7 +343,8 @@ public class MSBlocks
 		registry.register(new StrawberryBlock(Block.Properties.create(Material.GOURD, MaterialColor.RED).hardnessAndResistance(1.0F).sound(SoundType.WOOD)).setRegistryName("strawberry"));
 		registry.register(new StrawberryBlock.AttachedStem((StemGrownBlock) STRAWBERRY, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.WOOD)).setRegistryName("attached_strawberry_stem"));
 		registry.register(new StrawberryBlock.Stem((StemGrownBlock) STRAWBERRY, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0).sound(SoundType.WOOD)).setRegistryName("strawberry_stem"));
-		
+		registry.register(new PlantBlock(Block.Properties.create(Material.PLANTS, MaterialColor.YELLOW).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT).lightValue(11)).setRegistryName("glowflower"));
+
 		registry.register(new GoopBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(0.1F).sound(SoundType.SLIME).lightValue(14)).setRegistryName("glowy_goop"));
 		registry.register(new GoopBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(0.1F).sound(SoundType.SLIME)).setRegistryName("coagulated_blood"));
 		registry.register(new VeinBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.45F).sound(SoundType.SLIME)).setRegistryName("vein"));
@@ -415,6 +418,7 @@ public class MSBlocks
 		registry.register(new DecorBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F), MSBlockShapes.FROG_STATUE).setRegistryName("stone_mini_frog_statue"));
 		registry.register(new DecorBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F), MSBlockShapes.FROG_STATUE).setRegistryName("golden_mini_frog_statue"));
 		registry.register(new CassettePlayerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F).sound(SoundType.METAL), MSBlockShapes.CASSETTE_PLAYER).setRegistryName("cassette_player"));
+		registry.register(new Block(Block.Properties.create(Material.ROCK, MaterialColor.BLACK).hardnessAndResistance(50.0F, 1200.0F).harvestTool(ToolType.PICKAXE).harvestLevel(3)).setRegistryName("charred_obsidian"));
 
 		registry.register(new DecorBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F).sound(SoundType.METAL), MSBlockShapes.BLENDER).setRegistryName("blender"));
 		registry.register(new DecorBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(0.5F), MSBlockShapes.CHESSBOARD).setRegistryName("chessboard"));

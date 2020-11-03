@@ -236,6 +236,7 @@ public class MSBlockLootTables extends BlockLootTables
 		
 		registerDropSelfLootTable(GOLD_SEEDS);
 		registerDropSelfLootTable(WOODEN_CACTUS);
+		registerDropSelfLootTable(GLOWFLOWER);
 		
 		registerLootTable(APPLE_CAKE, func_218482_a());
 		registerLootTable(BLUE_CAKE, func_218482_a());
@@ -257,6 +258,7 @@ public class MSBlockLootTables extends BlockLootTables
 		registerDropSelfLootTable(STONE_MINI_FROG_STATUE);
 		registerDropSelfLootTable(GOLDEN_MINI_FROG_STATUE);
 		registerDropSelfLootTable(CASSETTE_PLAYER);
+		registerDropSelfLootTable(CHARRED_OBSIDIAN);
 		registerDropSelfLootTable(GLOWYSTONE_DUST);
 	}
 	

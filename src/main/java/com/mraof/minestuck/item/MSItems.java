@@ -581,6 +581,7 @@ public class MSItems
 		
 		registerItemBlock(registry, GOLD_SEEDS, MSItemGroup.MAIN);
 		registerItemBlock(registry, WOODEN_CACTUS, MSItemGroup.MAIN);
+		registerItemBlock(registry, GLOWFLOWER, MSItemGroup.MAIN);
 		
 		registerItemBlock(registry, new BlockItem(APPLE_CAKE, new Item.Properties().group(MSItemGroup.MAIN).maxStackSize(1)));
 		registerItemBlock(registry, new BlockItem(BLUE_CAKE, new Item.Properties().group(MSItemGroup.MAIN).maxStackSize(1)));
@@ -600,6 +601,7 @@ public class MSItems
 		//Junk Blocks
 		registerItemBlock(registry, GOLDEN_MINI_FROG_STATUE, MSItemGroup.JUNKS);
 		registerItemBlock(registry, CASSETTE_PLAYER, MSItemGroup.JUNKS);
+		registerItemBlock(registry, CHARRED_OBSIDIAN, MSItemGroup.JUNKS);
 
 		registerItemBlock(registry, BLENDER, MSItemGroup.MAIN);
 		registerItemBlock(registry, CHESSBOARD, MSItemGroup.MAIN);

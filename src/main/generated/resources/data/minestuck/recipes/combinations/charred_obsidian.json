@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minecraft:obsidian"
+  },
+  "input2": {
+    "item": "minecraft:coal"
+  },
+  "mode": "and",
+  "output": {
+    "item": "minestuck:charred_obsidian"
+  }
+}

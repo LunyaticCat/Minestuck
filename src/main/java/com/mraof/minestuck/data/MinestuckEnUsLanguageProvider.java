@@ -267,6 +267,7 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		addTooltip(MSBlocks.GOLD_SEEDS, "These seeds are made out of 24-karat gold!");
 		addStoreTooltip(MSBlocks.GOLD_SEEDS, "Do you like regular seeds? This here is the luxury variant!");
 		add(MSBlocks.WOODEN_CACTUS, "Wooden Cactus");
+		add(MSBlocks.GLOWFLOWER, "Glowflower");
 		add(MSBlocks.APPLE_CAKE, "Apple Cake");
 		addStoreTooltip(MSBlocks.APPLE_CAKE, "Cakes are truly the best when made with apples!");
 		add(MSBlocks.BLUE_CAKE, "Blue Cake");
@@ -296,6 +297,7 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		add(MSBlocks.STONE_MINI_FROG_STATUE, "Frog Statue Replica");
 		addStoreTooltip(MSBlocks.STONE_MINI_FROG_STATUE, "Some say it's creepy, some say it's cute, others would say it's contraband, so keep it out of sight!");
 		add(MSBlocks.GOLDEN_MINI_FROG_STATUE, "Golden Frog Statue Replica");
+		add(MSBlocks.CHARRED_OBSIDIAN, "Charred_Obsidian");
 		add(MSBlocks.GLOWYSTONE_DUST, "Glowystone Dust");
 		add(MSBlocks.OIL, "Oil");
 		add(MSBlocks.BLOOD, "Blood");

@@ -462,7 +462,7 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.STONE_SLAB).input(Items.STONE).and().input(MSItems.CARVING_TOOL).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.GLOWYSTONE_DUST).input(Items.REDSTONE).or().input(Items.GLOWSTONE_DUST).build(consumer);
 		
-		//Junks
+		//Junks Items
 		CombinationRecipeBuilder.of(MSItems.ACACIA_PLANK).input(Items.STICK).or().input(Blocks.ACACIA_PLANKS).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.BIRCH_PLANK).input(Items.STICK).or().input(Blocks.BIRCH_PLANKS).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.DARK_OAK_PLANK).input(Items.STICK).or().input(Blocks.DARK_OAK_PLANKS).build(consumer);
@@ -481,6 +481,9 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.ROYAL_STICK).input(Items.STICK).and().input(Items.GOLD_INGOT).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.REINFORCED_STICK).input(Items.STICK).and().input(Items.IRON_INGOT).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.LUXURY_STICK).input(Items.STICK).and().input(Items.DIAMOND).build(consumer);
+
+		//Junks Blocks
+		CombinationRecipeBuilder.of(MSBlocks.CHARRED_OBSIDIAN).input(Blocks.OBSIDIAN).and().input(Items.COAL).build(consumer);
 
 		CombinationRecipeBuilder.of(MSBlocks.BLUE_DIRT).input(Items.DIRT).or().input(Items.BLUE_DYE).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.THOUGHT_DIRT).input(Items.DIRT).or().input(Items.LIME_DYE).build(consumer);
@@ -507,7 +510,8 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSBlocks.WOODEN_CACTUS).input(Items.CACTUS).or().namedInput(ItemTags.LOGS).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.RAINBOW_SAPLING).input(MSBlocks.RAINBOW_LEAVES).or().input(MSBlocks.RAINBOW_LOG).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.END_SAPLING).input(MSBlocks.END_LEAVES).or().input(MSBlocks.END_LOG).build(consumer);
-		
+		CombinationRecipeBuilder.of(MSBlocks.GLOWFLOWER).input(Items.GLOWSTONE).or().namedInput(ItemTags.FLOWERS).build(consumer);
+
 		CombinationRecipeBuilder.of(MSBlocks.COARSE_STONE).input(Items.STONE).and().input(Items.GRAVEL).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.CHISELED_COARSE_STONE).input(Items.CHISELED_STONE_BRICKS).and().namedInput(Items.GRAVEL).build(consumer);
 		CombinationRecipeBuilder.of(MSBlocks.CHISELED_COARSE_STONE).input(Items.CHISELED_STONE_BRICKS).and().namedInput(MSBlocks.COARSE_STONE).build(consumer);
