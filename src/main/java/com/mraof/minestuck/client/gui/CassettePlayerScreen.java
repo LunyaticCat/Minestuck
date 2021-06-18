@@ -1,18 +1,12 @@
 package com.mraof.minestuck.client.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mraof.minestuck.network.MSPacketHandler;
-import com.mraof.minestuck.network.TransportalizerPacket;
-import com.mraof.minestuck.tileentity.TransportalizerTileEntity;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.TextFieldWidget;
-import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraftforge.fml.client.gui.widget.ExtendedButton;
 
 public class CassettePlayerScreen extends Screen
 {
@@ -22,7 +16,6 @@ public class CassettePlayerScreen extends Screen
 	private static final int guiHeight = 98;
 	
 	private TextFieldWidget destinationTextField;
-	private Button doneButton;
 	
 	private final PlayerEntity player;
 	private final Hand hand;
@@ -43,11 +36,7 @@ public class CassettePlayerScreen extends Screen
 		this.destinationTextField = new TextFieldWidget(this.font, this.width / 2 - 20, yOffset + 25, 40, 20, "Transportalizer destination code");	//TODO Use translation instead, and maybe look at other text fields for what the text should be
 		this.destinationTextField.setMaxStringLength(4);
 		this.destinationTextField.setFocused2(true);
-		destinationTextField.setResponder(s -> doneButton.active = s.length() == 4);
-		addButton(destinationTextField);
 		setFocusedDefault(destinationTextField);
-		
-		doneButton.active = destinationTextField.getText().length() == 4;
 	}
 	
 	@Override
