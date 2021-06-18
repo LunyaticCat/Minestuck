@@ -77,6 +77,11 @@ public class MSScreenFactories
 		Minecraft.getInstance().displayGuiScreen(new TitleSelectorScreen(title));
 	}
 	
+	public static void displayCassettePlayerScreen(PlayerEntity playerIn, Hand handIn)
+	{
+		Minecraft.getInstance().displayGuiScreen(new CassettePlayerScreen(playerIn, handIn));
+	}
+	
 	public static void displaySylladexScreen(Modus modus)
 	{
 		if(SYLLADEX_FACTORIES.containsKey(modus.getType()))

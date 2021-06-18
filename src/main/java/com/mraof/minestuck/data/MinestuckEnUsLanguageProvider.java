@@ -525,6 +525,7 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		add(MSItems.CANDY_SICKLE, "Candy Sickle");
 		add(MSItems.SCYTHE, "Scythe");
 		add(MSItems.EIGHTBALL_SCYTHE, "Eightball Scythe");
+		add(MSItems.CASSETTE_PLAYING_SICKLE, "Cassette-Playing Sickle");
 		add(MSItems.DEUCE_CLUB, "Deuce Club");
 		addTooltip(MSItems.DEUCE_CLUB, "The weakest club in the world");
 		add(MSItems.STALE_BAGUETTE, "Stale Baguette");

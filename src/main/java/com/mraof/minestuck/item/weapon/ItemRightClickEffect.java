@@ -1,5 +1,6 @@
 package com.mraof.minestuck.item.weapon;
 
+import com.mraof.minestuck.client.gui.MSScreenFactories;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -25,6 +26,14 @@ public interface ItemRightClickEffect
 		player.setActiveHand(hand);
 		return ActionResult.resultConsume(player.getHeldItem(hand));
 	};
+	
+	ItemRightClickEffect CASSETTE_PLAYER_FUNCTION = (world, player, hand) -> {
+	if(world.isRemote)
+	{
+		MSScreenFactories.displayCassettePlayerScreen(player, hand);
+	}
+		return ActionResult.resultSuccess(player.getHeldItem(hand));
+    };
 	
 	ItemRightClickEffect EIGHTBALL = (world, player, hand) -> {
 		if(world.isRemote)

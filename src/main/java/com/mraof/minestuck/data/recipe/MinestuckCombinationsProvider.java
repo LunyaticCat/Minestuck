@@ -368,6 +368,7 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.CLAW_OF_NRUBYIGLITH).namedInput(MSItems.CLAW_SICKLE).and().input(MSItems.GRIMOIRE).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.SCYTHE).input(MSItems.SICKLE).and().input(Items.WOODEN_SWORD).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.EIGHTBALL_SCYTHE).input(MSItems.SCYTHE).and().input(MSItems.EIGHTBALL).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.CASSETTE_PLAYING_SICKLE).input(MSItems.SCYTHE).and().input(MSBlocks.CASSETTE_PLAYER).build(consumer);
 		
 		CombinationRecipeBuilder.of(MSItems.STALE_BAGUETTE).input(Items.BREAD).or().namedInput(Items.STICK).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.STALE_BAGUETTE).input(Items.BREAD).or().namedInput(MSItems.DEUCE_CLUB).build(consumer);
