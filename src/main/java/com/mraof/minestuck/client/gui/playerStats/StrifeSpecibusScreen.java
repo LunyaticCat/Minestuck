@@ -1,64 +1,111 @@
 package com.mraof.minestuck.client.gui.playerStats;
 
-import com.mraof.minestuck.player.KindAbstratusList;
-import com.mraof.minestuck.player.KindAbstratusType;
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mraof.minestuck.client.gui.MSScreenFactories;
+import com.mraof.minestuck.client.gui.captchalouge.SylladexScreen;
+import com.mraof.minestuck.inventory.StrifeSpecibusMenu;
+import com.mraof.minestuck.inventory.captchalogue.Modus;
+import com.mraof.minestuck.inventory.captchalogue.ModusType;
+import com.mraof.minestuck.inventory.captchalogue.ModusTypes;
+import com.mraof.minestuck.item.CaptchaCardItem;
+import com.mraof.minestuck.network.CaptchaDeckPackets;
+import com.mraof.minestuck.player.ClientPlayerData;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.screens.ConfirmScreen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ServerboundContainerClosePacket;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.client.gui.widget.ExtendedButton;
+import net.neoforged.neoforge.network.PacketDistributor;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@ParametersAreNonnullByDefault
-public class StrifeSpecibusScreen extends PlayerStatsScreen
+public class StrifeSpecibusScreen extends PlayerStatsContainerScreen<StrifeSpecibusMenu>
 {
 	public static final String TITLE = "minestuck.strife_specibus";
+	public static final String USE_ITEM = "minestuck.captcha_deck.use_item";
 	public static final String KIND_ABSTRATUS = "minestuck.kind_abstratus";
 	
 	private static final ResourceLocation guiStrifeSelector = ResourceLocation.fromNamespaceAndPath("minestuck", "textures/gui/strife_selector.png");
 	
-	private static final int columnWidth = 70, columns = 3;
-	
-	public StrifeSpecibusScreen()
+	public StrifeSpecibusScreen(int windowId, Inventory playerInventory)
 	{
-		super(Component.translatable(TITLE));
-		guiWidth = 228;
-		guiHeight = 150;
+		super(new StrifeSpecibusMenu(windowId, playerInventory), playerInventory, Component.translatable(TITLE));
+		guiWidth = 178;
+		guiHeight=	 255;
 	}
 	
 	@Override
-	public void renderBackground(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks)
+	public void init()
 	{
-		super.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
+		super.init();
+	}
+	
+	@Override
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY)
+	{
 		
 		drawTabs(guiGraphics);
+		
+		RenderSystem.setShaderColor(1, 1, 1, 1);
 		guiGraphics.blit(guiStrifeSelector, xOffset, yOffset, 0, 0, guiWidth, guiHeight);
+		
+		drawActiveTabAndIcons(guiGraphics);
+		
 	}
 	
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks)
+	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY)
 	{
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		String message = getTitle().getString();
+		guiGraphics.drawString(font, message, (this.width / 2F) - font.width(message) / 2F - leftPos - 15, yOffset + 12 - topPos, 0xafafaf, false);
 		
-		String message = "This feature isn't implemented yet.";//new TranslationTextComponent(KIND_ABSTRATUS).getFormattedText();
-		guiGraphics.drawString(font, message, (this.width / 2F) - mc.font.width(message) / 2F, yOffset + 12, 0x404040, false);
-		
-		int i = 0;
-		for(KindAbstratusType type : KindAbstratusList.getTypeList()) {
-			String typeName = type.getDisplayName().getString();
-			int xPos = xOffset+9+(columnWidth)*((i%columns)+1)-mc.font.width(typeName);
-			int yPos = yOffset+35+(mc.font.lineHeight+1)*(i/columns);
-			
-			if(!isPointInRegion(xOffset+9+(columnWidth)*(i%columns)+1, yPos-1, columnWidth-1, mc.font.lineHeight+1, mouseX, mouseY))
-				guiGraphics.drawString(font, typeName, xPos, yPos, 0xFFFFFF, false);
-			else {
-				guiGraphics.fill(xOffset+9+(columnWidth)*(i%columns)+1, yPos-1, xOffset+9+(columnWidth)*((i%columns)+1), yPos+mc.font.lineHeight, 0xFFAFAFAF);
-				guiGraphics.drawString(font, typeName, xPos, yPos, 0x000000, false);
+	}
+	
+	private void use() {
+		ItemStack stack = menu.getMenuItem();
+		if(!stack.isEmpty())
+		{
+			if(!(stack.getItem() instanceof CaptchaCardItem))
+			{
+				ModusType<?> type = ModusTypes.getTypeFromItem(stack.getItem());
+				Modus newModus = type.createClientSide();
+				Modus modus = ClientPlayerData.getModus();
+				if(newModus != null && modus != null && newModus.getClass() != modus.getClass() && !newModus.canSwitchFrom(modus))
+				{
+					minecraft.screen = new ConfirmScreen(this::onConfirm, Component.translatable(SylladexScreen.EMPTY_SYLLADEX_1), Component.translatable(SylladexScreen.EMPTY_SYLLADEX_2))
+					{
+						@Override
+						public void removed()
+						{
+							minecraft.screen = StrifeSpecibusScreen.this;
+							minecraft.player.closeContainer();
+						}
+					};
+					minecraft.screen.init(minecraft, width, height);
+					return;
+				}
 			}
-			i++;
+			PacketDistributor.sendToServer(new CaptchaDeckPackets.TriggerModusButton());
 		}
-		
-		drawActiveTabAndOther(guiGraphics, mouseX, mouseY);
-		
+	}
+	
+	private void sylladex()
+	{
+		if( ClientPlayerData.getModus() != null)
+		{
+			minecraft.player.connection.send(new ServerboundContainerClosePacket(minecraft.player.containerMenu.containerId));
+			MSScreenFactories.displaySylladexScreen(ClientPlayerData.getModus());
+			minecraft.player.containerMenu = minecraft.player.inventoryMenu;
+		}
+	}
+	
+	private void onConfirm(boolean result)
+	{
+		if(result && !menu.getMenuItem().isEmpty())
+			PacketDistributor.sendToServer(new CaptchaDeckPackets.TriggerModusButton());
+		minecraft.screen = this;
 	}
 	
 }
